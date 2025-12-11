@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nano Prompt Hub - Gemini Image Editing</title>
+    <meta name="description" content="A library of ready-to-use image editing prompts for Google Gemini and Nano Banana models.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast hidden">
+        <span class="toast-icon">✓</span>
+        <span id="toast-msg">Copied!</span>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <div id="logo-btn" class="logo" style="cursor: pointer;">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">Nano Prompt Hub</span>
+            </div>
+            
+            <nav class="lang-switcher">
+                <button class="lang-btn active" id="btn-en" data-lang="en">EN</button>
+                <button class="lang-btn" id="btn-fr" data-lang="fr">FR</button>
+                <button class="lang-btn" id="btn-ar" data-lang="ar">AR</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <h1 data-i18n="heroTitle">Unlock the power of Gemini Image Editing</h1>
+                    <p data-i18n="heroSubtitle">Curated, ready-to-use prompts for the Nano Banana model. Transform your photos instantly.</p>
+                    <button id="hero-browse-btn" class="btn-primary" data-i18n="heroCta">Browse Prompts</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prompt Library Section -->
+        <section id="library" class="library-section">
+            <div class="container">
+                <div class="library-header">
+                    <h2 data-i18n="libraryTitle">Prompt Library</h2>
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="text" id="searchInput" placeholder="Search prompts...">
+                    </div>
+                </div>
+                
+                <!-- Category Filters -->
+                <div class="categories-wrapper">
+                    <div class="categories" id="categoryContainer">
+                        <!-- Buttons injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Prompts Grid -->
+                <div class="prompts-grid" id="promptsGrid">
+                    <!-- Cards injected via JS -->
+                </div>
+                
+                <!-- No Results Message -->
+                <div id="noResults" class="no-results hidden">
+                    <p>No prompts found matching your search.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Use Section -->
+        <section class="how-to-use">
+            <div class="container">
+                <h2 data-i18n="howToTitle">How to use</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <p data-i18n="step1">Open Google Gemini.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <p data-i18n="step2">Upload your photo.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <p data-i18n="step3">Copy a prompt below and paste it.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <p data-i18n="step4">Adjust as needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footerDisclaimer">Not affiliated with Google. Use prompts creatively.</p>
+            <div style="margin-top: 10px;">
+                <a href="https://gemini.google.com/" target="_blank" class="footer-link" data-i18n="footerLink">Open Gemini</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
